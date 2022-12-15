@@ -49,8 +49,7 @@ test:
 #
 production:
   <<: *default
-  adapter: mysql2
   database: gamejouhou_app_production
-  username: gamejouhou_app
+  username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
