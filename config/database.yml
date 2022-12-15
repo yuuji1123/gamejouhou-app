@@ -19,7 +19,7 @@ default: &default
 
 development:
   <<: *default
-   adapter: mysql2
+  adapter: mysql2
   database: gamejouhou_app_development
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
