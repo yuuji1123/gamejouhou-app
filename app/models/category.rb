@@ -11,5 +11,8 @@ class Category < ActiveHash::Base
     { id: 9, name: '音楽' },
     { id: 10, name: 'その他' }
   ]
-  end
+
+  include ActiveHash::Associations
+  has_many :games
+
 end
