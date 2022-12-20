@@ -1,7 +1,7 @@
 class GamesController < ApplicationController
 
   def index
-    @game = Game.order("created_at DESC")
+    @game = Game.includes(:user).order("created_at DESC")
   end
 
   def new
