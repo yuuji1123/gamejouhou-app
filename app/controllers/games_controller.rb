@@ -4,4 +4,7 @@ class GamesController < ApplicationController
     # @game = Game.find(params[:id])
   end
 
+  def new
+  end
+
 end
