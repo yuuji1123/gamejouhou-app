@@ -1,0 +1,9 @@
+<div class="contents row">
+  <p><%= @nickname %>さんの投稿一覧</p>
+  <% @game.each do |game| %>
+    <div class="content_post" >
+      <p><%= game.text %></p>
+      <span class="name"><%= game.name %></span>
+    </div>
+  <% end %>
+</div>
