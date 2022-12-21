@@ -1,0 +1,53 @@
+<%= render "shared/header" %>
+
+<div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      <%= @game.title %>
+    </h2>
+  
+  <%# ログイン中であれば表示 %>
+
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">投稿者</th>
+          <td class="detail-value"><%= @game.user.nickname %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">カテゴリー</th>
+          <td class="detail-value"><%= @game.category.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">点数</th>
+          <td class="detail-value"><%= @game.point.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">プレイ時間</th>
+          <td class="detail-value"><%= @game.time %>時間</td>
+        </tr>
+        <tr>
+          <th class="detail-item">評価</th>
+          <td class="detail-value"><%= @game.comment %></td>
+        </tr>
+      </tbody>
+    </table>
+
+      <% if user_signed_in? %> 
+    <%# 出品者かつ未購入品であれば、編集・削除を表示 %>
+    <% if current_user.id == @game.user_id  %> 
+      <%= link_to 'ゲーム情報の編集', edit_game_path(@game), method: :get, class: "item-red-btn" %>
+      <p class='or-text'>or</p>
+      <%= link_to '削除', game_path(@game), method: :delete, class:'item-destroy' %>
+    <%# 未購入品でない場合には、売り切れを表示 %>
+    <% end %>
+  <% end %>
+
+    <%# <div class="option"> %>
+      <%# <div class="favorite-btn"> %>
+        <%# <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%> 
+        <%# <span>お気に入り 0</span> %>
+      <%# </div> %>
+    <%# </div> %>
+  </div>
+  <%# /商品の概要 %>

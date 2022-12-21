@@ -1,3 +1,5 @@
+  <%= render "shared/header" %>
+  
   <div class="items-sell-main">
     <h2 class="items-sell-title">ゲームの情報を入力</h2>
     <%= form_with model: @game, local: true do |f| %>
@@ -21,8 +23,6 @@
         <%= f.collection_select(:point_id, Point.all, :id, :name, {}, {class:"select-box"}) %>
       </div>
     </div>
-    <%# /商品の詳細 %>
-    <%# 配送について %>
     <div class="items-detail">
       <div class="weight-bold-text question-text">
         <span>プレイ時間</span>
