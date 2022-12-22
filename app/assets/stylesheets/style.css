@@ -31,16 +31,16 @@ iframe {width: 100%;}
 /*リンク（全般）設定
 ---------------------------------------------------------------------------*/
 a {
-	color: #666;	/*リンクテキストの色*/
+	color: black;	/*リンクテキストの色*/
 }
 a:hover {
-	color: #000;	/*マウスオン時の文字色*/
+	color: lightslategray;	/*マウスオン時の文字色*/
 }
 
 /*コンテナー（ホームページを囲む一番外側のブロック）
 ---------------------------------------------------------------------------*/
 #container {
-	width: 80%;			/*ブロックの幅を画面の80%にする設定。*/
+	width: 70%;			/*ブロックの幅を画面の80%にする設定。*/
 	max-width: 1000px;	/*上のwidth指定の追加設定。幅1000pxを最大幅に設定し、それ以上広げない。*/
 	margin: 0 auto;		/*HP画面の左右中央に表示させる設定*/
 }
@@ -383,3 +383,98 @@ li {
   width: 60%;
 }
 
+.maincontent{
+	display: flex;
+	
+}
+
+
+.categoryimg .img2:before{
+	content: '';
+	display: inline-block;
+  width: 100px;
+  height: 100px;
+	content: url(./jump-across.png);
+	background-size: contain;
+  vertical-align: middle;
+}
+
+.categoryimg .img3:before{
+	content: '';
+	display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url(./swords-emblem.png);
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.categoryimg .img4:before{
+	content: '';
+	display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url(./village.png);
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.categoryimg .img5:before{
+	content: '';
+	display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url(./envelope.png);
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.categoryimg .img6:before{
+	content: '';
+	display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url(./rocket-flight.png);
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.categoryimg .img7:before{
+	content: '';
+	display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url(./puzzle.png);
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.categoryimg .img8:before{
+	content: '';
+	display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url(./soccer-kick.png);
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.categoryimg .img9:before{
+	content: '';
+	display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url(./musical-notes.png);
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.categoryimg .img10:before{
+	content: '';
+	display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url(./linked-rings.png);
+  background-size: contain;
+  vertical-align: middle;
+}
