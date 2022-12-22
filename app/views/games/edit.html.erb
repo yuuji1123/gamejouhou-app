@@ -1,8 +1,5 @@
-  <%= render "shared/header" %>
-
-  <div class="items-sell-main">
-    <h2 class="items-sell-title">ゲームの情報を入力</h2>
-   <%= form_with model: @game, local: true do |f| %>
+<%= render "shared/header" %>
+<%= form_with model: @game, local: true do |f| %>
 
     <div class="new-items">
       <div class="weight-bold-text">
@@ -34,12 +31,10 @@
      <%= f.text_area :comment, class:"items-text", id:"item-info", placeholder:"ゲームの説明・感想" ,rows:"7" ,maxlength:"1000" %>
       </div>
     </div>
-
-
-    <%# 下部ボタン %>
+      <%# 下部ボタン %>
     <div class="sell-btn-contents">
-      <%= f.submit "投稿する" ,class:"sell-btn" %>
-      <%=link_to 'もどる', root_path, class:"back-btn" %>
+      <%= f.submit "変更する" ,class:"sell-btn" %>
+      <%= link_to 'もどる', root_path, class:"back-btn" %>
     </div>
     <%# /下部ボタン %>
   </div>

@@ -20,20 +20,7 @@
 
 <div id="container">
 
-<header>
-<h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="ゲーム情報交換"></a></h1>
-<nav id="menubar">
-<ul>
- <% if user_signed_in? %>
-   <li><%= link_to current_user.nickname, "/users/#{current_user.id}", class: "user-nickname" %> </li>
- <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %> </li>
-  <% else %>  
-<li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-  <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-<% end %>
-</ul>
-</nav>
-</header>
+<%= render "shared/header" %>
 
 <aside id="mainimg">
 <img src="images/1.jpg" alt="" id="slide0">
@@ -46,24 +33,26 @@
 
 <section id="new">
 <h2 id="newinfo_hdr" class="close">新規投稿</h2>
-<%# <% @games.each do |game| %>
-      <%# <li class='list'> %>
-        <%# <%= link_to game_path(game) do %> %>
-        <%# <div class='item-img-content'> %>
-        <%# <%= image_tag item.image.variant(resize: '500x500'), class: "item-img" if item.image.attached? %> %>
+<% @game.each do |game| %> 
+       <li class='list'> 
+         <%= link_to game_path(game) do %> 
+        <div class='item-img-content'>
+        <%# <%= image_tag item.image.variant(resize: '500x500'), class: "item-img" if item.image.attached? %>
         <%# </div> %>
-        <%# <div class='game-info'> %>
-          <%# <h3 class='game-name'> %>
-            <%# <%= game.name %> %>
-          <%# </h3> %>
-          <%# <div class='item-price'> %>
-            <%# <span><%= game.evaluation %>点<br><%# game.category %></span> %>
-            <%# </div> %>
-          <%# </div> %>
-        <%# </div> %>
-      <%# </li> %>
-      <%# <% end %> %> %>
+        <div class='game-info'>
+          <h3 class='game-name'>
+            <%= game.title %>
+          </h3>
+          <div class='rate'>
+            <span class='rate<%= game.point.id-1%>-10'></span></div>
+						<div><%= game.category.name %></div>           
+          </div>
+          <span class='game-user'>by<%= game.user.nickname %> </span>
+        </div>
+      </li>
+      <% end %> 
 </section>
+ <% end %> 
 
 <section>
 <!--/contents-->
@@ -75,6 +64,11 @@
 
 </div>
 <!--/container-->
+
+<%= link_to(new_game_path, class: 'purchase-btn') do %>
+  <span class='purchase-btn-text'>投稿する</span>
+  <%= image_tag '609.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+<% end %>
 
 <!--スマホ用更新情報　480px以下-->
 <script type="text/javascript">

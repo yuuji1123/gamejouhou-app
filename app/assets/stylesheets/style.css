@@ -50,21 +50,30 @@ a:hover {
 /*headerブロック*/
 header {
 	text-align: center;		/*headerの中身をセンタリングさせる設定*/
-	height: 150px;			/*headerの高さ*/
+	height: 180px;			/*headerの高さ*/
 	background: #000;	/*headerの背景色*/
 }
 /*ロゴ画像設定*/
 #logo  img {
-	width: 300px;			/*画像幅*/
+	width: 350px;			/*画像幅*/
 	margin-top: 30px;		/*画像の上に空けるスペース*/
-	margin-bottom: 30px;	/*画像の下に空けるスペース*/
+	margin-bottom: 40px;	/*画像の下に空けるスペース*/
 }
+
+.logo{
+	font-size: 50px;
+	text-decoration: none
+
+}
+
+
 
 /*メニュー
 ---------------------------------------------------------------------------*/
 /*メニュー全体を囲むブロック*/
 #menubar {
-	text-align: center;	/*文字をセンタリング*/
+	text-align: right;	/*文字をセンタリング*/
+font-size: 18px;
 }
 /*メニュー１個あたりの設定*/
 #menubar li {
@@ -132,6 +141,8 @@ header {
 .list p {
 	padding: 0 !important;
 }
+
+
 
 /*フッター(ページ最下部のcopyrightのパーツ)設定
 ---------------------------------------------------------------------------*/
@@ -233,3 +244,142 @@ footer .pr {
 }
 
 }
+
+.rate{
+	position: relative;
+	display: inline-block;
+	}
+	.rate:before{
+	content: "★★★★★★★★★★";
+	color: #ccc;
+	}
+
+.rate0-10:after,
+.rate1:before,
+.rate1:after,
+.rate1-10:before,
+.rate1-10:after,
+.rate2:before,
+.rate2:after,
+.rate2-10:before,
+.rate2-10:after,
+.rate3:before,
+.rate3:after,
+.rate3-10:before,
+.rate3-10:after,
+.rate4:before,
+.rate4:after,
+.rate4-10:before,
+.rate4-10:after,
+.rate5:before,
+.rate5:after,
+.rate5-10:before,
+.rate5-10:after,
+.rate6:before,
+.rate6:after,
+.rate6-10:before,
+.rate6-10:after,
+.rate7:before,
+.rate7:after,
+.rate7-10:before,
+.rate7-10:after,
+.rate8:before,
+.rate8:after,
+.rate8-10:before,
+.rate8-10:after,
+.rate9:before,
+.rate9:after,
+.rate9-10:before,
+.rate9-10:after,
+.rate10:after
+{
+position: absolute;
+top:0;
+left:0;
+color: #FFA500;
+overflow: hidden;
+height: 24px;
+}
+
+.rate .rate0-10:after,
+.rate .rate1-10:after,
+.rate .rate2-10:after,
+.rate .rate3-10:after,
+.rate .rate4-10:after,
+.rate .rate5-10:after,
+.rate .rate6-10:after,
+.rate .rate7-10:after,
+.rate .rate8-10:after,
+.rate .rate9-10:after
+{
+	width: 8px;
+	content: "★";
+}
+
+
+.rate .rate1-10:before{
+	content: "★★★★★★★★★★";
+}
+
+.rate .rate2-10:before{
+	content: "★★★★★★★★★";
+}
+
+.rate .rate3-10:before{
+	content: "★★★★★★★★";
+}
+
+.rate .rate4-10:before{
+	content: "★★★★★★★";
+}
+
+.rate .rate5-10:before{
+	content: "★★★★★★";
+}
+
+.rate .rate6-10:before{
+	content: "★★★★★";
+}
+
+.rate .rate7-10:before{
+	content: "★★★★";
+}
+
+.rate .rate8-10:before{
+	content: "★★★";
+}
+
+.rate .rate9-10:before{
+	content: "★★";
+}
+.rate .rate10:after{
+	content: "★";
+}
+
+li {
+  list-style: none;
+}
+
+.purchase-btn {
+  width: 120px;
+  background: #666;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 36px;
+  right: 36px;
+  position: fixed;
+  padding: 15px;
+}
+
+.purchase-btn-text {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.purchase-btn-icon {
+  width: 60%;
+}
+
