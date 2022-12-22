@@ -1,1 +1,41 @@
 <%= render "shared/header" %>
+<%= form_with model: @game, local: true do |f| %>
+
+    <div class="new-items">
+      <div class="weight-bold-text">
+        ゲーム名
+      </div>
+      <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"ゲーム名", maxlength:"40" %>
+    </div>
+    <%# 商品の詳細 %>
+    <div class="items-detail">
+      <div class="form">
+        <div class="weight-bold-text">
+          ゲームのジャンル
+        </div>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box"}) %>
+        <div class="weight-bold-text">
+          ゲームの評価(10点満点)
+        </div>
+        <%= f.collection_select(:point_id, Point.all, :id, :name, {}, {class:"select-box"}) %>
+      </div>
+    </div>
+    <div class="items-detail">
+      <div class="weight-bold-text question-text">
+        <span>プレイ時間</span>
+      
+      <%= f.text_field :time, class:"input-default", id:"time", placeholder:"20",maxlength:"4"%>
+      <span>時間</span>
+      </div>
+    </div>
+     <%= f.text_area :comment, class:"items-text", id:"item-info", placeholder:"ゲームの説明・感想" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+      <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "変更する" ,class:"sell-btn" %>
+      <%= link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+<% end %>

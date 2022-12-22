@@ -22,9 +22,32 @@ class GamesController < ApplicationController
   end
 
   def edit
+    @game = Game.find(params[:id])
+    if @game.user_id == current_user.id 
+    else
+      redirect_to root_path
+    end
+  end
+
+  def update
+    @game.update(game_params)
+    # バリデーションがOKであれば詳細画面へ
+    if @game.valid?
+      redirect_to game_path(game_params)
+    else
+      # NGであれば、エラー内容とデータを保持したままeditファイルを読み込み、エラーメッセージを表示させる
+      render 'edit'
+    end
   end
 
   def destroy
+    @game = Game.find(params[:id])
+    if @game.user_id == current_user.id
+      @game.destroy
+      redirect_to root_path
+    else
+      redirect_to root_path
+    end
   end
 
   private
