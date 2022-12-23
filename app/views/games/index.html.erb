@@ -31,31 +31,30 @@
 
 <div id="contents">
 
-<section id="new">
-<h2 id="newinfo_hdr" class="close">新規投稿</h2>
-</section>
-<ul class='item-lists'>
-<% @game.each do |game| %> 
+    <section id="new">
+      <h2 id="newinfo_hdr" class="close">新規投稿</h2>
+    </section>
+    <ul class='item-lists'>
+      <% @game.each do |game| %> 
        <li class='list'> 
          <%= link_to game_path(game) do %> 
          <div class='maincontent'>
-				<div class='categoryimg'>
+				  <div class='categoryimg'>
             <span class='img<%= game.category.id %>'></span></div>           
-        <div class='game-info'>
-          <h3 class='game-name'><%= game.title %></h3>
-          <div class='rate'>
-            <span class='rate<%= game.point.id-1%>-10'></span></div>
+            <div class='game-info'>
+             <h3 class='game-name'><%= game.title %></h3>
+              <div class='rate'>
+              <span class='rate<%= game.point.id-1%>-10'></span></div>
 
-          <div><span class='game-category'><%= game.category.name %> </span></div>
-          <span class='game-user'>by<%= game.user.nickname %> </span>
-        </div>
-       </div>
-     </div>
-     </li>
-         </ul>
+               <div><span class='game-category'><%= game.category.name %> </span></div>
+               <span class='game-user'>by<%= game.user.nickname %> </span>
+            </div>
+          </div>
+       </li>
+     </ul>
       <% end %> 
  <% end %> 
-
+</div>
 <!--/contents-->
 
 <footer>

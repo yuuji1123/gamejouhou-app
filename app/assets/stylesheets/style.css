@@ -19,7 +19,7 @@ body {
 	background: linear-gradient(#000 150px, #fff 150px);	/*トップページ以外の背景設定。画面の上から150pxまでが#000で、そこからすぐ#fffの白色に切り替える内容。*/
 }
 body#top {
-	background: linear-gradient(#000 450px, #fff 450px);	/*トップページの背景設定。画面の上から450pxまでが#000で、そこからすぐ#fffの白色に切り替える内容。*/
+	background: linear-gradient(#000 540px, #fff 450px);	/*トップページの背景設定。画面の上から450pxまでが#000で、そこからすぐ#fffの白色に切り替える内容。*/
 }
 h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;}
 ul {list-style-type: none;}
@@ -55,13 +55,14 @@ header {
 }
 /*ロゴ画像設定*/
 #logo  img {
-	width: 350px;			/*画像幅*/
-	margin-top: 30px;		/*画像の上に空けるスペース*/
-	margin-bottom: 40px;	/*画像の下に空けるスペース*/
+	width: 300px;			/*画像幅*/
+	margin-top: 20px;		/*画像の上に空けるスペース*/
+	margin-bottom: 20px;	/*画像の下に空けるスペース*/
 }
 
 .logo{
-	font-size: 50px;
+	font-size: 60px;
+	margin-bottom: 20px;
 	text-decoration: none
 
 }
@@ -126,6 +127,7 @@ font-size: 18px;
 	overflow: hidden;
 	border-bottom: 1px solid #ccc;	/*下線の幅、線種、色*/
 	padding: 20px;	/*ボックス内の余白*/
+	
 }
 /*h4見出しの設定*/
 .list h4 {
@@ -162,6 +164,8 @@ footer .pr {
 /*トップページ内「更新情報・お知らせ」ブロック
 ---------------------------------------------------------------------------*/
 /*ブロック全体の設定*/
+
+
 #new dl {
 	padding-left: 20px;
 	margin-bottom: 15px;
@@ -394,7 +398,7 @@ li {
 	display: inline-block;
   width: 100px;
   height: 100px;
-	content: url(./jump-across.png);
+	background-image: url(./jump-across.png);
 	background-size: contain;
   vertical-align: middle;
 }
