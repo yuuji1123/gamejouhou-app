@@ -1,0 +1,16 @@
+.info{
+display: flex;
+width: 50vw;
+  align-items: center;
+  padding: 5vh 5vw;
+
+}
+
+.content_post{
+  border: 1px solid #dedede;
+  margin: 0px 10px;
+}
+
+.game-name{
+  font-size: 18px;
+}

@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @nickname = current_user.nickname
+    @user = current_user
     @games = current_user.games
   end
 
