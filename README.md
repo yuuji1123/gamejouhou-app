@@ -1,24 +1,35 @@
-# README
+## アプリケーション名
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ゲーム情報交換アプリ
 
-Things you may want to cover:
 
-* Ruby version
+## アプリケーションの概要
 
-* System dependencies
+最新ゲームからレトロゲーム、話題作からインディーズゲームまで様々なゲームがある昨今、ユーザーがゲームの情報や評価を投稿し、コミュニケーションをとるためのアプリです。
 
-* Configuration
 
-* Database creation
+## URL
 
-* Database initialization
+http://18.180.68.20/
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## テスト用アカウント
 
-* Deployment instructions
+#### Basic認証
 
-* ...
+・ID: virchow
+
+・Pass: 1986
+
+・メールアドレス: test@com
+
+・パスワード: test001
+
+
+# 利用方法
+
+### ゲーム情報の投稿
+
+1.トップページのヘッダーからユーザーの新規登録を行う。
+
+2.

@@ -132,7 +132,7 @@ font-size: 18px;
 /*h4見出しの設定*/
 .list h4 {
 	color: #000;	/*文字色*/
-	font-size: 16px;	/*文字サイズ。少し大きくしています。*/
+	font-size: 20px;	/*文字サイズ。少し大きくしています。*/
 }
 /*画像の設定*/
 .list img {
@@ -389,15 +389,14 @@ li {
 
 .maincontent{
 	display: flex;
-	
 }
 
 
 .categoryimg .img2:before{
 	content: '';
 	display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
 	background-image: url(./jump-across.png);
 	background-size: contain;
   vertical-align: middle;
@@ -406,8 +405,8 @@ li {
 .categoryimg .img3:before{
 	content: '';
 	display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   background-image: url(./swords-emblem.png);
   background-size: contain;
   vertical-align: middle;
@@ -416,8 +415,8 @@ li {
 .categoryimg .img4:before{
 	content: '';
 	display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   background-image: url(./village.png);
   background-size: contain;
   vertical-align: middle;
@@ -426,8 +425,8 @@ li {
 .categoryimg .img5:before{
 	content: '';
 	display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   background-image: url(./envelope.png);
   background-size: contain;
   vertical-align: middle;
@@ -436,8 +435,8 @@ li {
 .categoryimg .img6:before{
 	content: '';
 	display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   background-image: url(./rocket-flight.png);
   background-size: contain;
   vertical-align: middle;
@@ -446,8 +445,8 @@ li {
 .categoryimg .img7:before{
 	content: '';
 	display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   background-image: url(./puzzle.png);
   background-size: contain;
   vertical-align: middle;
@@ -456,8 +455,8 @@ li {
 .categoryimg .img8:before{
 	content: '';
 	display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   background-image: url(./soccer-kick.png);
   background-size: contain;
   vertical-align: middle;
@@ -466,8 +465,8 @@ li {
 .categoryimg .img9:before{
 	content: '';
 	display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   background-image: url(./musical-notes.png);
   background-size: contain;
   vertical-align: middle;
@@ -476,8 +475,8 @@ li {
 .categoryimg .img10:before{
 	content: '';
 	display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   background-image: url(./linked-rings.png);
   background-size: contain;
   vertical-align: middle;

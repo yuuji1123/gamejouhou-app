@@ -1,9 +1,17 @@
+<%= render "shared/header" %>
+
 <div class="contents row">
-  <p><%= @nickname %>さんの投稿一覧</p>
-  <% @game.each do |game| %>
-    <div class="content_post" >
-      <p><%= game.text %></p>
-      <span class="name"><%= game.name %></span>
-    </div>
-  <% end %>
+  <p class="midasi"><%= @user.nickname %>さんの投稿一覧</p>
+  <ul class="info" >
+    <% @games.each do |game| %>
+      <div class="content_post" >
+      <%= link_to game_path(game) do %>
+        <li><span class="title"><%= game.title %></span></li> 
+         <% end %> 
+        <li><span class="category"><%= game.category.name %></span></li>
+      <li><span class="point"><%= game.point.name %></span></li>
+      <li><span class="time"><%= game.time %>時間</span></li>
+      </div>
+    <% end %>
+  </ul>
 </div>

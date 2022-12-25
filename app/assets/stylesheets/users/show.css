@@ -1,0 +1,26 @@
+.info{
+display: flex;
+  align-items: center;
+  padding: 5vh 5vw;
+  justify-content: space-between;
+}
+
+.content_post{
+  border: 3px ridge #dedede;
+  margin: 0px 10px;
+  width: 32%;
+}
+
+.midasi{
+  font-size: 25px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.game-name{
+  font-size: 18px;
+}
+
+.title{
+  font-size: 16px;
+}

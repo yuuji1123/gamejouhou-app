@@ -6,21 +6,16 @@
       <%= @game.title %>
     </h2>
   
-  <%# ログイン中であれば表示 %>
 
     <table class="detail-table">
       <tbody>
-        <tr>
-          <th class="detail-item">投稿者</th>
-          <td class="detail-value"><%= @game.user.nickname %></td>
-        </tr>
         <tr>
           <th class="detail-item">カテゴリー</th>
           <td class="detail-value"><%= @game.category.name %></td>
         </tr>
         <tr>
           <th class="detail-item">点数</th>
-          <td class="detail-value"><%= @game.point.name %></td>
+          <td class="detail-value"><%= @game.point.name %>/10</td>
         </tr>
         <tr>
           <th class="detail-item">プレイ時間</th>
@@ -30,6 +25,11 @@
           <th class="detail-item">評価</th>
           <td class="detail-value"><%= @game.comment %></td>
         </tr>
+        <tr>
+          <th class="detail-item">投稿者</th>
+          <td class="detail-value"><%= @game.user.nickname %></td>
+        </tr>
+
       </tbody>
     </table>
 
