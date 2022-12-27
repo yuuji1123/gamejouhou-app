@@ -80,10 +80,8 @@ belongs_to :user
 # 開発環境
 
 #### ローカル環境
-・Rails 6.0.6
-
-・ruby 2.6.5
-
+・Rails 6.0.6  
+・ruby 2.6.5  
 ・mysql2 0.5.3
 
 # ローカルでの動作方法
