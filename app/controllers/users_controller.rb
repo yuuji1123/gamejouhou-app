@@ -8,4 +8,10 @@ class UsersController < ApplicationController
     @games = current_user.games
   end
 
+  def edit
+  end
+
+  def update
+  end
+  
 end
