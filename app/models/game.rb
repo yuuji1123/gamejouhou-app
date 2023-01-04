@@ -1,5 +1,6 @@
 class Game < ApplicationRecord
   belongs_to :user
+  has_many :communications
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
