@@ -19,6 +19,8 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+    @communication = Communication.new
+    @communications = @game.communications.includes(:user)
   end
 
   def edit

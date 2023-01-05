@@ -34,14 +34,23 @@
     </table>
 
       <% if user_signed_in? %> 
-    <%# 出品者かつ未購入品であれば、編集・削除を表示 %>
     <% if current_user.id == @game.user_id  %> 
       <%= link_to 'ゲーム情報の編集', edit_game_path(@game), method: :get, class: "item-red-btn" %>
       <p class='or-text'>or</p>
       <%= link_to '削除', game_path(@game), method: :delete, class:'item-destroy' %>
-    <%# 未購入品でない場合には、売り切れを表示 %>
     <% end %>
   <% end %>
+
+<div class="container">
+    <% if user_signed_in? %>
+      <%= form_with(model: [@game, @communication], local: true) do |form| %>
+        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+        <%= form.submit "SEND" %>
+      <% end %>
+    <% else %>
+      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+    <% end %>
+  </div>
 
     <%# <div class="option"> %>
       <%# <div class="favorite-btn"> %>
