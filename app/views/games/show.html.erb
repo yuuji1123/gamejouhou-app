@@ -51,6 +51,15 @@
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
     <% end %>
   </div>
+  <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% @communications.each do |communication| %>
+        <p>
+          <strong><%= link_to communication.user.nickname, "/users/#{communication.user_id}" %>：</strong>
+          <%= communication.text %>
+        </p>
+      <% end %>
+    </div>
 
     <%# <div class="option"> %>
       <%# <div class="favorite-btn"> %>
