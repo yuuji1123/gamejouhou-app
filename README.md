@@ -74,8 +74,16 @@ has_many :games
 | comment    | text | null: false |
 | user | references | null: false, foreign_key: true |
 
+
 #### Association
 belongs_to :user
+
+### communicationsテーブル
+| Column   | Type   | Options     |
+|----------|--------|-------------|
+| user | references | null: false, foreign_key: true |
+| game    | references | null: false, foreign_key: true |
+| text | text | null: false |
 
 # 開発環境
 
