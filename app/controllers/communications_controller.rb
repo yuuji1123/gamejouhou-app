@@ -1,7 +1,11 @@
 class CommunicationsController < ApplicationController
   def create
-    communication = Communication.create(cammunication_params)
-    redirect_to "/games/#{communication.game.id}"
+    @communication = Communication.new(cammunication_params)
+    if @communication.save
+    redirect_to "/games/#{@communication.game.id}"
+    else
+      render "/games/#{game.id}"
+    end
   end
 
   private

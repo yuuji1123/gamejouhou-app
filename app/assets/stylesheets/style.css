@@ -482,3 +482,10 @@ li {
   vertical-align: middle;
 }
 
+.com-send{
+	font-size: 24px;
+	color: #000;
+  background-color: lightsteelblue;
+  border-bottom: 5px solid lightsteelblue;
+}
+
